@@ -1,7 +1,7 @@
 a modified version of the original [Health Indicators](https://github.com/AdyTech99/HealthIndicators) mod
 
 > [!note]
-> curseforge/modrinth pages are awaiting approval
+> modrinth page is awaiting approval
 
 [<img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_vector.svg">](https://www.curseforge.com/minecraft/mc-mods/health-indicators-fork)
 [<img alt="modrinth" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_vector.svg">](https://modrinth.com/mod/health-indicators-fork)
