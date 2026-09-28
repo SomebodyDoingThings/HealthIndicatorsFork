@@ -174,10 +174,6 @@ public class RenderTracker {
         return false;
     }
 
-    public static boolean isOkayToRenderThroughWalls(LivingEntity livingEntity){
-        return isTargeted(livingEntity) && !livingEntity.isAlwaysTicking();
-    }
-
     public static boolean isInvalid(Entity entity){
         return (entity == null
                 || !entity.isAlive()
@@ -185,8 +181,8 @@ public class RenderTracker {
                 || entity.touchingUnloadedChunk()
                 || !(entity instanceof LivingEntity)
                 || client.player == null
-                || client.player.getVehicle() == entity
-                || entity.isInvisibleTo(client.player));
+                || client.player.getVehicle() == entity);
+                //|| entity.isInvisibleTo(client.player));
     }
     private static Entity getEntityFromUUID(UUID uuid, ClientLevel world) {
         for (Entity entity : world.entitiesForRendering()) {

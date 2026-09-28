@@ -105,7 +105,7 @@ public abstract class EntityRendererMixin<T extends LivingEntity, S extends Livi
         double heartDensity = 50F - (Math.max(4F - Math.ceil((double) heartsTotal / heartsPerRow), -3F) * 5F);
         double h = 0;
         // Check if entity is obstructed by blocks
-        boolean shouldRenderThroughWalls = ModConfig.HANDLER.instance().show_through_walls && RenderTracker.isOkayToRenderThroughWalls(livingEntity); // && isEntityObstructedByBlocks(livingEntity);
+        boolean shouldRenderThroughWalls = ModConfig.HANDLER.instance().show_through_walls; // && isEntityObstructedByBlocks(livingEntity);
         for (int isDrawingEmpty = 0; isDrawingEmpty < 2; isDrawingEmpty++) {
             //   Order 1: Empty hearts (background)
             //   Order 2: Filled hearts (foreground)
@@ -206,7 +206,7 @@ public abstract class EntityRendererMixin<T extends LivingEntity, S extends Livi
         double d = this.entityRenderDispatcher.distanceToSqr(livingEntity);
         final T entAsT = (T) livingEntity;
         String healthText = RenderUtils.getHealthText(livingEntity);
-        boolean shouldRenderThroughWalls = ModConfig.HANDLER.instance().show_through_walls && RenderTracker.isOkayToRenderThroughWalls(livingEntity);
+        boolean shouldRenderThroughWalls = ModConfig.HANDLER.instance().show_through_walls; //&& RenderTracker.isOkayToRenderThroughWalls(livingEntity);
         matrixStack.pushPose();
         float scale = ModConfig.HANDLER.instance().size;
         matrixStack.translate(0, livingEntity.getBbHeight() + 0.5f, 0);
@@ -261,7 +261,7 @@ public abstract class EntityRendererMixin<T extends LivingEntity, S extends Livi
         float maxX = pixelsTotal / 2.0f;
         float scale = ModConfig.HANDLER.instance().size;
         // Check if entity is obstructed by blocks
-        boolean shouldRenderThroughWalls = ModConfig.HANDLER.instance().show_through_walls && RenderTracker.isOkayToRenderThroughWalls(livingEntity);
+        boolean shouldRenderThroughWalls = ModConfig.HANDLER.instance().show_through_walls; //&& RenderTracker.isOkayToRenderThroughWalls(livingEntity);
     double h = 0;
         
         for (int isDrawingEmpty = 0; isDrawingEmpty < 2; isDrawingEmpty++) {
